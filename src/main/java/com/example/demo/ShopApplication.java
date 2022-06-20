@@ -23,7 +23,6 @@ public class ShopApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ShopApplication.class, args);
-		System.out.println("Testing");
 	}
 
 	@Bean
@@ -42,6 +41,15 @@ public class ShopApplication {
 		@Override
 		public void configure(WebSecurity web) throws Exception {
 			web.ignoring().antMatchers("/api/v1/register");
+			web.ignoring().antMatchers("/swagger-ui/index.html");
+			web.ignoring().antMatchers("/shopSwagger");
+			web.ignoring().antMatchers("/swagger-ui/swagger-ui.css");
+			web.ignoring().antMatchers("/swagger-ui/swagger-ui-bundle.js");
+			web.ignoring().antMatchers("/swagger-ui/swagger-ui-standalone-preset.js");
+			web.ignoring().antMatchers("/v3/api-docs/swagger-config");
+			web.ignoring().antMatchers("/v3/api-docs");
+			web.ignoring().antMatchers("/swagger-ui/favicon-32x32.png");
+			web.ignoring().antMatchers("/swagger-ui/favicon-16x16.png");
 		}
 
 		@Override

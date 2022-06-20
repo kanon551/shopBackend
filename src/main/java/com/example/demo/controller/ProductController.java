@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://shopperfront.herokuapp.com")
 @RequestMapping("/api/v1")
 @RestController
 public class ProductController {

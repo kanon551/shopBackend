@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import java.util.List;
 
-@CrossOrigin
+@CrossOrigin(origins = "https://shopperfront.herokuapp.com")
 @RequestMapping("/api/v1")
 @RestController
 public class UserController {

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 
-@CrossOrigin
+@CrossOrigin(origins = "https://shopperfront.herokuapp.com")
 @RequestMapping("/api/checkout")
 @RestController
 public class StripePaymentController {
